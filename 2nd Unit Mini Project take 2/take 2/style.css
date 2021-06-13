@@ -1,0 +1,117 @@
+:root {
+    --black: black; 
+    --lighttgray: rgba(240, 239, 239, 0.911); 
+    --white: white;
+}
+
+/* TO DO: Use flexbox and media queries to create a responsive grid layout. */
+
+/*why aren't the card sizes the same???*/
+
+* {
+    line-height: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: var(--lightgray);
+}
+
+h1 {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+
+}
+
+header p {
+    font-size: large;
+    text-align: center;
+    line-height: 135%;
+}
+
+main {
+    display: block;
+}
+
+header h2 {
+    text-align: center;
+    display: block;
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    display: grid;
+    /* option: grid-template-columns: 33% 33% 33%; or repeat (3, 33%) or use repeat(3, 1fr)*/
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin: auto;
+    background-color: var(--lightgray);
+
+}
+
+.card {
+    border: 10px solid var(--black);
+    padding: 10px;
+    margin: 5% auto;
+    color: var(--black);
+    background-color: var(--white);
+    border: 2px dashed var(--black);
+    border-radius: 5px;
+}
+
+
+/* format of card header */
+.card h2 {
+    border: 2px solid var(--black);
+    border-radius: 15px;
+    padding: 2%;
+    margin: -40px auto auto auto;
+    color: var(--white);
+    background-image: linear-gradient(var(--black) 0%, gray 100%);
+    transition: font-size 4s 1s;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* hover over h2 causing font size to grow */
+.card h2:hover {
+    font-size: 36px;
+  }
+
+/* how to get this to wrap but not the other sections??? */
+.card pre {
+    user-select: all;
+    font-family: monospace;
+    color: var(--white);
+    background-color: var(--black);
+    
+}
+
+footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.heart {
+    color: red;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        display: grid;
+        /* option: grid-template-columns: 50% 50%; */
+        grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        /* option: grid-template-columns: 100%; */
+        grid-template-columns: 1fr;
+    }
+}
+

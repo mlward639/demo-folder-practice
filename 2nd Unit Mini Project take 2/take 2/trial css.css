@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    gap: 15px 10px; 
+}
+
+.card {
+    border: 1px solid black;
+    padding: 20px;
+    
+}
+
+/* On tablet at size 768px and above, display two CSS code snippets per row */
+@media screen and (max-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+     }
+}
+
+/* On mobile device, under 768px, display one CSS code snippet per row */
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}

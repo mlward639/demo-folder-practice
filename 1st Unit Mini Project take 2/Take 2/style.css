@@ -1,0 +1,55 @@
+/* Why is there a horizontal scroll bar on website? */
+
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: rgb(169, 169, 230);  ;
+}
+header {
+    color: rgb(9, 9, 32);
+    background-color: rgb(127, 127, 199); 
+    border: 2px solid rgb(9, 9, 32);
+    position: fixed;
+    top: 0;
+    width: 100%;
+} 
+
+/* Leave space at top for header once header is made sticky with scroll */
+header + main {
+    padding-top: 122px;
+  }
+
+h1 {
+    text-align: center;
+}
+
+li {
+    display: inline;
+    text-align: left;
+    font-size: 18px;
+}
+
+img {
+    width: 10%;
+    height: auto;
+    position: relative;
+    left: 570px;
+    z-index: -1;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.submit {
+    position: relative;
+    left: 60px;
+}
+
+footer {
+    text-align: center;
+    color:rgb(9, 9, 32);
+    font-weight: bold;
+}
